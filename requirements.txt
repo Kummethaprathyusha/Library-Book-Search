@@ -1,0 +1,4 @@
+system Requirements
+
+Django==2.2
+django-crispy-forms

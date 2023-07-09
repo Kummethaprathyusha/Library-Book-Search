@@ -1,0 +1,51 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8">
+            <form method="post">
+                {% csrf_token %}
+                <div class="wrapper fadeInDown">
+                    <div id="formContent">
+                        <!-- Tabs Titles -->
+
+                        <!-- Icon -->
+                        <div class="fadeIn first">
+                            <img src="https://images.squarespace-cdn.com/content/v1/55e06d0ee4b0718764fcc921/1507805805238-M8XG4RMCMWITZ7LJGEEF/slidebank+login.gif"
+                                id="icon" alt="User Icon" />
+                            <h4> LIBRARY MANAGEMNT SYSTEM</h4>
+                        </div>
+
+                        <!-- Login Form -->
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">submit</button>
+
+                        <!-- Remind Passowrd -->
+                        <div id="formFooter">
+                            <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+                        </div>
+
+
+                    </div>
+
+
+                    {#<input type="submit" value="login" />#}
+                    {#<input type="hidden" name="next" value="{{ next }}" />#}
+            </form>
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+</div>
+{% endblock %}
